@@ -1,0 +1,19 @@
+version: 1
+applications:
+  - frontend:
+      buildPath: apps/product-frontend
+      phases:
+        preBuild:
+          commands:
+            - npm ci --cache .npm --prefer-offline
+        build:
+          commands:
+            - npx turbo build --filter=docs...
+      artifacts:
+        baseDirectory: apps/docs/.next
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: apps/product-frontend/apps/docs
