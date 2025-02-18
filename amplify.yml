@@ -9,7 +9,7 @@ applications:
           commands:
             - npx turbo build --filter=docs...
       artifacts:
-        baseDirectory: apps/docs/.next
+        baseDirectory: .next
         files:
           - "**/*"
       cache:
