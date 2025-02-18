@@ -1,6 +1,7 @@
 version: 1
 applications:
   - frontend:
+      buildPath: /
       phases:
         preBuild:
           commands:
@@ -9,7 +10,7 @@ applications:
           commands:
             - npx turbo build --filter=docs...
       artifacts:
-        baseDirectory: .next
+        baseDirectory: apps/product-frontend/apps/docs/.next
         files:
           - "**/*"
       cache:
