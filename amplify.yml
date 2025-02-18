@@ -1,7 +1,7 @@
 version: 1
 applications:
   - frontend:
-      buildPath: apps/product-frontend
+      buildPath: apps/product-frontend/apps/docs
       phases:
         preBuild:
           commands:
